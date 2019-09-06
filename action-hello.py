@@ -63,7 +63,7 @@ class Hello(object):
 
         # action code goes here...
         print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-        say = ["Salut gros", "Wesh bien ?", "Bonjour l'ami", "Salut, tu vas bien ?", "Wesh, tranquil ou quoi ?", "Hey cousin, ça se passe ?", "Hey, la forme ?"]
+        say = ["Salut gros", "Wesh bien ?", "Bonjour l'ami", "Salut pelo", "Wesh, tranquil ou quoi ?", "Hey cousin, ça se passe ?", "Coucou, la forme ?"]
         result_sentence = random.choice(say)
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Boubou")
