@@ -35,7 +35,7 @@ class Hello(object):
 
     # --> Sub callback function, one per intent
 
-    def Blabla(self, hermes, intent_message):
+    def Blabla_callback(self, hermes, intent_message):
         # terminate the session first if not continue
         hermes.publish_end_session(intent_message.session_id, "")
 
@@ -46,7 +46,7 @@ class Hello(object):
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Blabla")
 
-    def Boubou(self, hermes, intent_message):
+    def Boubou_callback(self, hermes, intent_message):
         # terminate the session first if not continue
         hermes.publish_end_session(intent_message.session_id, "")
 
@@ -57,7 +57,7 @@ class Hello(object):
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Boubou")
 
-    def Coucou(self, hermes, intent_message):
+    def Coucou_callback(self, hermes, intent_message):
         # terminate the session first if not continue
         hermes.publish_end_session(intent_message.session_id, "")
 
@@ -66,17 +66,17 @@ class Hello(object):
         say = ["Salut gros", "Wesh bien ?", "Bonjour l'ami", "Salut pelo", "Wesh, tranquil ou quoi ?", "Hey cousin, ça se passe ?", "Coucou, la forme ?"]
         result_sentence = random.choice(say)
         # if need to speak the execution result by tts
-        hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Boubou")
+        hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Coucou")
 
     # --> Master callback function, triggered everytime an intent is recognized
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
         if coming_intent == 'equisables:Blabla':
-            self.Blabla(hermes, intent_message)
+            self.Blabla_callback(hermes, intent_message)
         if coming_intent == 'equisables:Boubou':
-            self.Boubou(hermes, intent_message)
+            self.Boubou_callback(hermes, intent_message)
         if coming_intent == 'equisables:Coucou':
-            self.Coucou(hermes, intent_message)
+            self.Coucou_callback(hermes, intent_message)
         # more callback and if condition goes here...
 
     # --> Register callback function and start MQTT
