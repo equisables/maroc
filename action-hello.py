@@ -35,28 +35,6 @@ class Hello(object):
 
     # --> Sub callback function, one per intent
 
-    def Blabla_callback(self, hermes, intent_message):
-        # terminate the session first if not continue
-        hermes.publish_end_session(intent_message.session_id, "")
-
-        # action code goes here...
-        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-        say = ["Je fais blabla aussi", "C'est quoi blabla ?", "Arrete le blabla pour une fois", "Beaucoup de blabla par ici", "Bim Boum Bla Bam"]
-        result_sentence = random.choice(say)
-        # if need to speak the execution result by tts
-        hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Blabla")
-
-    def Boubou_callback(self, hermes, intent_message):
-        # terminate the session first if not continue
-        hermes.publish_end_session(intent_message.session_id, "")
-
-        # action code goes here...
-        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-        say = ["J'adore boubou", "J'aime bien les boubou", "C'est quoi ça boubou ?", "Loulou", "J'ai faim"]
-        result_sentence = random.choice(say)
-        # if need to speak the execution result by tts
-        hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Boubou")
-
     def Coucou_callback(self, hermes, intent_message):
         # terminate the session first if not continue
         hermes.publish_end_session(intent_message.session_id, "")
@@ -68,16 +46,45 @@ class Hello(object):
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Coucou")
 
+    def Trophy4L_callback(self, hermes, intent_message):
+        # terminate the session first if not continue
+        hermes.publish_end_session(intent_message.session_id, "")
+
+        # action code goes here...
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+	annee = '{}'.format(intent_message.slots.annee.first().value)
+	if annee == "1997":
+	  say = "test 1997"
+	elif annee == "2001":
+	  say = "test 2001"
+	#if annee == "1997":
+	#  say = "D'après ce que m'ont raconté de vieilles trophistes, 1997 est l'année de naissance du 4L Trophy. J'ai entendu dire qu'elles n'étaient que 3 à concourir cette année là"
+	#if annee == "2001":
+	#  say = "2001, c'est l'année qui marque l'essort du roadtrip. L'école supérieure de commerce de Rennes aide à l'organisation du raid et permet ainsi son développement."
+	#elif annee == "2005":
+	#  say = "En 2005, le raid compte pas moins de 460 équipages. Cela commence à en faire du monde !"
+	elif annee == "2008":
+	  say = "Cette annee la jee tirais mes suspensions fatiguee tandis que 1000 4L saffrontaient dans le dee zer marocain"
+# dans le désert marocain."
+	#elif annee == "2020":
+	#  say = "Aujourd'hui, en 2020, c'est pas loin de 1500 voitures qui se retrouvent à participer au 4L Trophy"
+	#else:
+	#  say = "Je ne connais pas cette date"
+	#if '{}'.format(intent_message.slots.annee.first().value) == "1997":
+	#  say = '{}'.format(intent_message.slots.annee.first().value)
+	#say = "Salut mon ami"
+#	say = "coucou"
+       # if need to speak the execution result by tts
+        hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy4L")
+
     # --> Master callback function, triggered everytime an intent is recognized
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
-        if coming_intent == 'equisables:Blabla':
-            self.Blabla_callback(hermes, intent_message)
-        if coming_intent == 'equisables:Boubou':
-            self.Boubou_callback(hermes, intent_message)
         if coming_intent == 'equisables:Coucou':
             self.Coucou_callback(hermes, intent_message)
-        # more callback and if condition goes here...
+    	if coming_intent == 'equisables:Trophy4L':
+	    self.Trophy4L_callback(hermes, intent_message)
+    # more callback and if condition goes here...
 
     # --> Register callback function and start MQTT
     def start_blocking(self):
