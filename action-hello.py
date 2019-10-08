@@ -36,7 +36,7 @@ class Hello(object):
         result_sentence = random.choice(say)
         hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Coucou")
 
-    def Trophy4L_callback(self, hermes, intent_message):
+    def Annee_callback(self, hermes, intent_message):
         hermes.publish_end_session(intent_message.session_id, "")
 
         print '[Received] intent: {}'.format(intent_message.intent.intent_name)
@@ -52,16 +52,15 @@ class Hello(object):
 	elif annee == "2020":
 	  say = u"Aujourd'hui, en 2020, c'est pas loin de 1500 voitures qui se retrouvent à participer au 4L Trophy"
 	else:
-	  if: annee >= "2020"	  
-say = u"Je n'ai pas d'information sur cette date"
-	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy4L")
+	  say = u"Je n'ai pas d'information sur cette date"
+	hermes.publish_start_session_notification(intent_message.site_id, say, "Annee")
 
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
         if coming_intent == 'equisables:Coucou':
             self.Coucou_callback(hermes, intent_message)
-    	if coming_intent == 'equisables:Trophy4L':
-	    self.Trophy4L_callback(hermes, intent_message)
+    	if coming_intent == 'equisables:Annee':
+	    self.Annee_callback(hermes, intent_message)
 
     def start_blocking(self):
         with Hermes(MQTT_ADDR) as h:
