@@ -28,14 +28,6 @@ class Hello(object):
 
         self.start_blocking()
 
-    def Coucou_callback(self, hermes, intent_message):
-        hermes.publish_end_session(intent_message.session_id, "")
-
-        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-        say = ["Salut gros", "Wesh bien ?", "Bonjour l'ami", "Salut pelo", "Wesh, tranquil ou quoi ?", "Hey cousin, ça se passe ?", "Coucou, la forme ?"]
-        result_sentence = random.choice(say)
-        hermes.publish_start_session_notification(intent_message.site_id, result_sentence, "Coucou")
-
     def Annee_callback(self, hermes, intent_message):
         hermes.publish_end_session(intent_message.session_id, "")
 
@@ -57,8 +49,6 @@ class Hello(object):
 
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
-        if coming_intent == 'equisables:Coucou':
-            self.Coucou_callback(hermes, intent_message)
     	if coming_intent == 'equisables:Annee':
 	    self.Annee_callback(hermes, intent_message)
 
