@@ -134,9 +134,9 @@ class Hello(object):
           say = u"Chaque équipage doit ramener 30 kilos de denrées alimentaires pour la croix rouge. Mais aussi des fournitures scolaires et sportives pour les enfants du désert marocain. Ensuite ils peuvent faire d'autres dons s'ils le souhaitent"
         elif solidarite == "enfants":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
-        elif solidarite == "récolter des dons materiels":
+        elif solidarite == "recolter des dons materiels":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
-        elif solidarite == "récolter des dons financiers":
+        elif solidarite == "recolter des dons financiers":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
         elif solidarite == "l'objectif du 4L Trophy":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
