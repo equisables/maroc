@@ -53,10 +53,72 @@ class Hello(object):
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Annee")
 
 
+    def Climat_callback(self, hermes, intent_message):
+        hermes.publish_end_session(intent_message.session_id, "")
+
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+	climat = '{}'.format(intent_message.slots.climat.first().value)
+	if climat == "aride":
+	  say = u"Ouais, comme la région de marakech !"
+	elif climat == "chaud" or climat == "météo" or climat == "climat":
+	  say = u"Au Maroc, les étés sont chauds et secs, surtout lorsque souffle le sirocco brulant ou le chergui, vent d'été venant du Sahara. Mais les hivers sont froids et pluvieux avec gel et neige. C'est fou !"
+	else:
+	  say = u"Je ne pige rien"
+	hermes.publish_start_session_notification(intent_message.site_id, say, "Climat")
+
+
+    def Paysage_callback(self, hermes, intent_message):
+        hermes.publish_end_session(intent_message.session_id, "")
+
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+	paysage = '{}'.format(intent_message.slots.paysage.first().value)
+	if paysage == "oasis" or paysage == "plateaux" or paysage == "plaines" or paysage == "montagnes" or paysage == "paysage":
+	  say = u"Le Maroc est un pays avec une très grande diversité de paysages : montagnes, désert, plaines, plateaux, oasis et pleins d'autres choses encore !"
+	else:
+	  say = u"Je ne pige rien"
+	hermes.publish_start_session_notification(intent_message.site_id, say, "Paysage")
+
+
+    def Pub_callback(self, hermes, intent_message):
+        hermes.publish_end_session(intent_message.session_id, "")
+
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+	pub = '{}'.format(intent_message.slots.pub.first().value)
+	if pub == "buzz":
+	  say = u"J'avoue que je suis principalement à l'origine du beuzz"
+	elif pub == "linkedin":
+	  say = u"Je me souviens de la publicité LinkedIn qu'a tourné Hadrien pour faire la promo de l'asso. J'étais rouge à cette triste époque"
+	elif (pub == "followers" or qui == "réputé"):
+	  say = u"Je sais, je sais, des centaines de personnes me suivent. Une voiture qui parle, c'est délirant"
+	elif pub == "internet":
+	  say = u"La resta des réseaux internet, c'est moi"
+	elif pub == "je seche":
+	  say = u"JE SECHE JE SECHE"
+	elif pub == "logo":
+	  say = u"Le logo est plutôt sympa. Il véhicule la bienveillance et l'esprit d'équipe"
+	elif (pub == "facebook" or qui == "réseaux"):
+	  say = u"N'hésitez pas à me suivre sur Facebook sous le nom de page : equisables tiret 4L Trophy 2020"
+	elif (pub == "vidéos" or qui == "films"):
+	  say = u"On a tourné quelques vidéos pas piqué des hannetons. Elles retracent le parcous d'équisables jusqu'à aujourd'hui"
+	elif (pub == "site" or qui == "site internet"):
+	  say = u"Rien de mieux qu'un site internet pour une bonne visibilité web. Découvrez equisables point F R, et faites un petit don en passant"
+	elif (pub == "insta" or qui == "instagram" or qui == "photos de la 4L" or qui == "photos de toi"):
+	  say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
+	else:
+	  say = u"Je ne pige rien"
+        hermes.publish_start_session_notification(intent_message.site_id, say, "Pub")
+
+
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
     	if coming_intent == 'equisables:Annee':
 	    self.Annee_callback(hermes, intent_message)
+    	elif coming_intent == 'equisables:Paysage':
+	    self.Paysage_callback(hermes, intent_message)
+	elif coming_intent == 'equisables:Climat':
+	    self.Climat_callback(hermes, intent_message)
+	elif coming_intent == 'equisables:Pub':
+	    self.Pub_callback(hermes, intent_message)
 
 
     def start_blocking(self):
