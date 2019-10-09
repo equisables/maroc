@@ -30,7 +30,7 @@ class Hello(object):
 
         print '[Received] intent: {}'.format(intent_message.intent.intent_name)
 	annee = '{}'.format(intent_message.slots.annee.first().value)
-	if annee == "1997":
+	if (annee == "1997" or annee == "1991"):
 	  say = u"D'après ce que m'ont raconté de vieilles trophistes, 1997 est l'année de naissance du 4L Trophy. J'ai entendu dire qu'elles n'étaient que 3 à concourir cette année là"
 	elif annee == "2001":
 	  say = u"2001, c'est l'année qui marque l'essort du rodetrip. L'école supérieure de commerce de Rennes aide à l'organisation du raid et permet ainsi son développement."
