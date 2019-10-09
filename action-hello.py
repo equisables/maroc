@@ -90,7 +90,7 @@ class Hello(object):
 	  say = u"Je me souviens de la publicité LinkedIn qu'a tourné Hadrien pour faire la promo de l'asso. J'étais rouge à cette triste époque"
 	elif pub == "followers":
 	  say = u"Je sais, je sais, des centaines de personnes me suivent. Une voiture qui parle, c'est délirant"
-	elif pub == "réputé":
+	elif pub == "repute":
 	  say = u"Je sais, je sais, des centaines de personnes me suivent. Une voiture qui parle, c'est délirant"
 	elif pub == "internet":
 	  say = u"La resta des réseaux internet, c'est moi"
@@ -100,9 +100,9 @@ class Hello(object):
 	  say = u"Le logo est plutôt sympa. Il véhicule la bienveillance et l'esprit d'équipe"
 	elif pub == "facebook":
 	  say = u"N'hésitez pas à me suivre sur Facebook sous le nom de page : equisables tiret 4L Trophy 2020"
-	elif pub == "réseaux":
+	elif pub == "reseaux":
 	  say = u"N'hésitez pas à me suivre sur Facebook sous le nom de page : equisables tiret 4L Trophy 2020"
-	elif pub == "vidéos":
+	elif pub == "videos":
 	  say = u"On a tourné quelques vidéos pas piqué des hannetons. Elles retracent le parcous d'équisables jusqu'à aujourd'hui"
 	elif pub == "films":
 	  say = u"On a tourné quelques vidéos pas piqué des hannetons. Elles retracent le parcous d'équisables jusqu'à aujourd'hui"
@@ -164,7 +164,7 @@ class Hello(object):
           say = u"Hadrien, Clothilde et moi même représentons l'écurie 235 du 4L Trophy"
         elif equipage == "numero":
           say = u"Hadrien, Clothilde et moi même représentons l'écurie 235 du 4L Trophy"
-        elif equipage == "numero d'equipage":
+        elif equipage == "numero dequipage":
           say = u"Hadrien, Clothilde et moi même représentons l'écurie 235 du 4L Trophy"
         elif equipage == "equipage":
           say = u"Hadrien, Clothilde et moi même représentons l'équipage 235"
@@ -172,9 +172,9 @@ class Hello(object):
           say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
 	elif equipage == "drole dindividu":
           say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
-	elif equipage == "d'individu à bord":
+	elif equipage == "dindividu a bord":
           say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
-	elif equipage == "combien à bord":
+	elif equipage == "combien a bord":
           say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
         elif equipage == "bande":
           say = u"Je te présente ma bande : Clothilde et Hadrien"
@@ -208,9 +208,9 @@ class Hello(object):
           say = u"Je vous présente Hadrien, le mec s'endort dès qu'il s'assied côté passager"
         elif personnalite == "dormeur":
           say = u"Je vous présente Hadrien, le mec s'endort dès qu'il s'assied côté passager"
-        elif personnalite == "s'endort":
+        elif personnalite == "sendort":
           say = u"Je vous présente Hadrien, le mec s'endort dès qu'il s'assied côté passager"
-        elif personnalite == "l'ambiance":
+        elif personnalite == "lambiance":
           say = u"L'ambianceur de notre équipage c'est surement l'enceinte stéréo. Je dis ça, je ne dis rien"
         elif personnalite == "ambiance":
           say = u"L'ambianceur de notre équipage c'est surement l'enceinte stéréo. Je dis ça, je ne dis rien"
