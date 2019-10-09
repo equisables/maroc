@@ -75,9 +75,9 @@ class Hello(object):
         coming_intent = intent_message.intent.intent_name
     	if coming_intent == 'equisables:Annee':
 	    self.Annee_callback(hermes, intent_message)
-    	if coming_intent == 'equisables:Paysage':
+    	elif coming_intent == 'equisables:Paysage':
 	    self.Paysage_callback(hermes, intent_message)
-	if coming_intent == 'equisables:Climat':
+	elif coming_intent == 'equisables:Climat':
 	    self.Climat_callback(hermes, intent_message)
 
 
