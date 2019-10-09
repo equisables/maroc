@@ -64,7 +64,7 @@ class Hello(object):
 
         print '[Received] intent: {}'.format(intent_message.intent.intent_name)
 	paysage = '{}'.format(intent_message.slots.paysage.first().value)
-	if climat == "oasis":
+	if paysage == "oasis":
 	  say = u"Le Maroc est un pays avec une très grande diversité de paysages : montagnes, désert, plaines, plateaux, oasis et pleins d'autres choses encore !"
 	else:
 	  say = u"Je ne pige rien"
