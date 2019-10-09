@@ -122,6 +122,7 @@ class Hello(object):
 	  say = u"Je ne pige rien"
         hermes.publish_start_session_notification(intent_message.site_id, say, "Pub")
 
+
     def Solidarite_callback(self, hermes, intent_message):
         hermes.publish_end_session(intent_message.session_id, "")
 
@@ -137,7 +138,7 @@ class Hello(object):
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
         elif solidarite == "récolter des dons financiers":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
-        elif solidarite == "l'objectif du 4L Trophy"):
+        elif solidarite == "l'objectif du 4L Trophy":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
         elif solidarite == "croixrouge":
           say = u"La croix rouge est chargée de collecter 10 kilos de denrées alimentaires par équipage, pour en distribuer aux familles pauvres en france"
