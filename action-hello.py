@@ -100,7 +100,7 @@ class Hello(object):
 	  say = u"Le logo est plutôt sympa. Il véhicule la bienveillance et l'esprit d'équipe"
 	elif pub == "facebook":
 	  say = u"N'hésitez pas à me suivre sur Facebook sous le nom de page : equisables tiret 4L Trophy 2020"
-	elif pub == "réseaux"):
+	elif pub == "réseaux":
 	  say = u"N'hésitez pas à me suivre sur Facebook sous le nom de page : equisables tiret 4L Trophy 2020"
 	elif pub == "vidéos":
 	  say = u"On a tourné quelques vidéos pas piqué des hannetons. Elles retracent le parcous d'équisables jusqu'à aujourd'hui"
