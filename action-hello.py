@@ -147,6 +147,96 @@ class Hello(object):
         hermes.publish_start_session_notification(intent_message.site_id, say, "Solidarite")
 
 
+    def Equipage_callback(self, hermes, intent_message):
+        hermes.publish_end_session(intent_message.session_id, "")
+
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+        equipage = '{}'.format(intent_message.slots.equipage.first().value)
+        if equipage == "regiment":
+          say = u"Ah non non ! On ne part pas au front. Je suis trop vieille pour ça"
+        elif equipage == "smala":
+          say = u"Eh ! Nous ne sommes pas si nombreux. Juste moi, Clothilde et Hadrien. C'est tout"
+        elif equipage == "tribu":
+          say = u"Eh ! Nous ne sommes pas si nombreux. Juste moi, Clothilde et Hadrien. C'est tout"
+        elif equipage == "clan":
+          say = u"Eh ! On est pas dans clash of Clan. Il faut parler d'équipe"
+        elif equipage == "ecurie":
+          say = u"Hadrien, Clothilde et moi même représentons l'écurie 235 du 4L Trophy"
+        elif equipage == "numero":
+          say = u"Hadrien, Clothilde et moi même représentons l'écurie 235 du 4L Trophy"
+        elif equipage == "numero d'equipage":
+          say = u"Hadrien, Clothilde et moi même représentons l'écurie 235 du 4L Trophy"
+        elif equipage == "equipage":
+          say = u"Hadrien, Clothilde et moi même représentons l'équipage 235"
+        elif equipage == "individu":
+          say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
+	elif equipage == "drole dindividu":
+          say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
+	elif equipage == "d'individu à bord":
+          say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
+	elif equipage == "combien à bord":
+          say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
+        elif equipage == "bande":
+          say = u"Je te présente ma bande : Clothilde et Hadrien"
+        elif equipage == "troupe":
+          say = u"Ma petite troupe c'est deux jeunes et une vieille"
+        else:
+          say = u"Il faut rester une équipe"
+        hermes.publish_start_session_notification(intent_message.site_id, say, "Equipage")
+
+
+    def Personnalite_callback(self, hermes, intent_message):
+        hermes.publish_end_session(intent_message.session_id, "")
+
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+        personnalite = '{}'.format(intent_message.slots.personnalite.first().value)
+        if personnalite == "souple":
+          say = u"Clothilde a une conduite très souple. Merci encore !"
+        elif personnalite == "souplesse":
+          say = u"Clothilde a une conduite très souple. Merci encore !"
+        elif personnalite == "conduisez":
+          say = u"En vrai c'est moi qui conduit le plus souvent, mais ne leur dites pas, c'est un secret"
+        elif personnalite == "conducteurs":
+          say = u"En vrai c'est moi qui conduit le plus souvent, mais ne leur dites pas, c'est un secret"
+        elif personnalite == "conducteur":
+          say = u"En vrai c'est moi qui conduit le plus souvent, mais ne leur dites pas, c'est un secret"
+        elif personnalite == "vite":
+          say = u"Hadrien se moque vraissemblablement de mon vieil age. Il faut cesser d'écraser l'accelerateur jeune homme"
+        elif personnalite == "vitesse":
+          say = u"Hadrien se moque vraissemblablement de mon vieil age. Il faut cesser d'écraser l'accelerateur jeune homme"
+        elif personnalite == "dort":
+          say = u"Je vous présente Hadrien, le mec s'endort dès qu'il s'assied côté passager"
+        elif personnalite == "dormeur":
+          say = u"Je vous présente Hadrien, le mec s'endort dès qu'il s'assied côté passager"
+        elif personnalite == "s'endort":
+          say = u"Je vous présente Hadrien, le mec s'endort dès qu'il s'assied côté passager"
+        elif personnalite == "l'ambiance":
+          say = u"L'ambianceur de notre équipage c'est surement l'enceinte stéréo. Je dis ça, je ne dis rien"
+        elif personnalite == "ambiance":
+          say = u"L'ambianceur de notre équipage c'est surement l'enceinte stéréo. Je dis ça, je ne dis rien"
+        elif personnalite == "ambiancez":
+          say = u"La plupart du temps j'ambiance tout le monde avec mon klaxon"
+        elif personnalite == "lent":
+          say = u"Pour le coup, je ne suis pas de toute jeunesse. Donc on ira à mon rythme OK ?"
+	elif personnalite == "pas vite":
+          say = u"Pour le coup, je ne suis pas de toute jeunesse. Donc on ira à mon rythme OK ?"
+	elif personnalite == "doucement":
+          say = u"Pour le coup, je ne suis pas de toute jeunesse. Donc on ira à mon rythme OK ?"
+	elif personnalite == "lentement":
+          say = u"Pour le coup, je ne suis pas de toute jeunesse. Donc on ira à mon rythme OK ?"
+        elif personnalite == "raleur":
+          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
+	elif personnalite == "rale":
+          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
+	elif personnalite == "ralent":
+          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
+	elif personnalite == "raleuse":
+          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
+        else:
+          say = u"Je ne comprends rien"
+        hermes.publish_start_session_notification(intent_message.site_id, say, "Personnalite")
+
+
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
     	if coming_intent == 'equisables:Annee':
