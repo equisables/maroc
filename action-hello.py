@@ -87,7 +87,7 @@ class Hello(object):
 	hermes.publish_end_session(intent_message.session_id, "")
 
 	print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-	slottest = '{}'.format(intent_message.slots.test.first().value)
+	slottest = '{}'.format(intent_message.slots.slottest.first().value)
 	if slottest == "coucou":
 	  say = u"TEST OK"
 	else:
