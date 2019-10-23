@@ -63,8 +63,7 @@ class Hello(object):
 	elif (climat == "chaud" or climat == "climat"):
 	  say = u"Au Maroc, les étés sont chauds et secs, surtout lorsque souffle le sirocco brulant ou le chergui, vent d'été venant du Sahara. Mais les hivers sont froids et pluvieux avec gel et neige. C'est fou !"
 	elif climat == "meteo":
-	  #say = u"Au Maroc, les étés sont chauds et secs, surtout lorsque souffle le sirocco brulant ou le chergui, vent d'été venant du Sahara. Mais les hivers sont froids et pluvieux avec gel et neige. C'est fou !"
-	  say = u"TEST"
+	  say = u"Au Maroc, les étés sont chauds et secs, surtout lorsque souffle le sirocco brulant ou le chergui, vent d'été venant du Sahara. Mais les hivers sont froids et pluvieux avec gel et neige. C'est fou !"
 	else:
 	  say = u"Je ne pige rien"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Climat")
