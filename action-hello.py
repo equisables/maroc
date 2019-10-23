@@ -81,6 +81,32 @@ class Hello(object):
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Paysage")
 
 
+    def Personnalite_callback(self, hermes, intent_message):
+        hermes.publish_end_session(intent_message.session_id, "")
+
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+        personnalite = '{}'.format(intent_message.slots.personnalite.first().value)
+        if (personnalite == "souple" or personnalite == "souplesse"):
+          say = u"Clothilde a une conduite très souple. Merci encore !"
+        elif (personnalite == "conduisez" or personnalite == "conducteurs" or personnalite == "conducteur"):
+          say = u"En vrai c'est moi qui conduit le plus souvent, mais ne leur dites pas, c'est un secret"
+        elif (personnalite == "vite" or personnalite == "vitesse"):
+          say = u"Hadrien se moque vraissemblablement de mon vieil age. Il faut cesser d'écraser l'accelerateur jeune homme"
+        elif (personnalite == "dort" or personnalite == "dormeur" or personnalite == "sendort"):
+          say = u"Je vous présente Hadrien, le mec s'endort dès qu'il s'assied côté passager"
+        elif (personnalite == "lambiance" or personnalite == "ambiance"):
+          say = u"L'ambianceur de notre équipage c'est surement l'enceinte stéréo. Je dis ça, je ne dis rien"
+        elif personnalite == "ambiancez":
+          say = u"La plupart du temps j'ambiance tout le monde avec mon klaxon"
+        elif (personnalite == "lent" or personnalite == "pas vite" or personnalite == "doucement" or qui == "lentement"):
+          say = u"Pour le coup, je ne suis pas de toute jeunesse. Donc on ira à mon rythme OK ?"
+        elif (personnalite == "raleur" or personnalite == "rale" or personnalite == "ralent" or personnalite == "raleuse"):
+          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
+        else:
+          say = u"Je ne comprends rien"
+        hermes.publish_start_session_notification(intent_message.site_id, say, "Personnalite")
+
+
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
     	if coming_intent == 'equisables:Annee':
@@ -89,6 +115,8 @@ class Hello(object):
 	    self.Paysage_callback(hermes, intent_message)
 	elif coming_intent == 'equisables:Climat':
 	    self.Climat_callback(hermes, intent_message)
+	elif coming_intent == 'equisables:Personnalite':
+	    self.Personnalite_callback(hermes, intent_mesage)
 
 
     def start_blocking(self):
