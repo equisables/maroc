@@ -48,6 +48,8 @@ class Hello(object):
 	  say = u"Cette année-la, j'étirais mes suspensions fatiguées, tandis que mille.  4L s'affrontaient dans le désert marocain"
 	elif annee == "2020":
 	  say = u"Aujourd'hui, en 2020, c'est pas loin de 1500 voitures qui se retrouvent à participer au 4L Trophy. La course a 23 ans"
+	elif annee == "lentement":
+	  say = u"TEST"
 	else:
 	  say = u"Je n'ai pas d'information sur cette date"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Annee")
@@ -79,6 +81,18 @@ class Hello(object):
 	else:
 	  say = u"Je ne pige rien"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Paysage")
+
+
+    def Test_callback(self, hermes, intent_message):
+	hermes.publish_end_session(intent_message.session_id, "")
+
+	print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+	slottest = '{}'.format(intent_message.slots.test.first().value)
+	if slottest == "coucou":
+	  say = u"TEST OK"
+	else:
+	  say = u"PRESQUE OK"
+	hermes.publish_start_session_notification(intent_message.site_id, say, "Test")
 
 
     def Personnalite_callback(self, hermes, intent_message):
@@ -143,6 +157,8 @@ class Hello(object):
 	    self.Climat_callback(hermes, intent_message)
 	elif coming_intent == 'equisables:Personnalite':
 	    self.Personnalite_callback(hermes, intent_mesage)
+	elif coming_intent == 'equisables:Test':
+	    self.Test_callback(hermes, intent_message)
 
 
     def start_blocking(self):
