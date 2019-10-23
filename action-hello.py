@@ -135,6 +135,42 @@ class Hello(object):
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy")
 
 
+    def Quoi_callback(self, hermes, intent_message):
+        hermes.publish_end_session(intent_message.session_id, "")
+
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+        quoi = '{}'.format(intent_message.slots.quoi.first().value)
+        if quoi == "4L Trophy":
+          say = u"C'est un rallye aid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
+        elif quoi == "Hamada":
+          say = u "C'est le troisième type de désert présent au maroc. En gros c'est une étendue rocailleuse à perte de vue"
+        elif quoi == "religion":
+          say = u"Le peuple marocain est majoritairement de religion musulmane"
+        elif quoi == "musulmans":
+          say = u"Le peuple marocain est majoritairement de religion musulmane"
+        elif quoi == "Reg":
+          say = u"C'est ce qui caractérise un désert de pierres"
+        elif quoi == "4L Trophy":
+          say = u"C'est un rally aid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
+        elif quoi == "lecole":
+          say = u"Ils font un master en management des systèmes d'informations et du numérique"
+        elif quoi == "master":
+          say = u"Ils font un master en management des systèmes d'informations et du numérique"
+        elif quoi == "etudes":
+          say = u"Ils font un master en management des systèmes d'informations et du numérique"
+        elif quoi == "etude":
+          say = u"Ils font un master en management des systèmes d'informations et du numérique"
+        elif quoi == "motive":
+          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
+        elif quoi == "motivation":
+          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
+        elif quoi == "motives":
+          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
+        else:
+          say = u"qui quoi ? j'ai rien pigé"
+        hermes.publish_start_session_notification(intent_message.site_id, say, "Quoi")
+
+
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
     	if coming_intent == 'equisables:Annee':
@@ -145,8 +181,8 @@ class Hello(object):
 	    self.Climat_callback(hermes, intent_message)
 	elif coming_intent == 'equisables:Trophy':
 	    self.Trophy_callback(hermes, intent_message)
-#	elif coming_intent == 'equisables:Test':
-#	    self.Test_callback(hermes, intent_message)
+	elif coming_intent == 'equisables:Quoi':
+	    self.Quoi_callback(hermes, intent_message)
 
 
     def start_blocking(self):
