@@ -130,45 +130,35 @@ class Hello(object):
           say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
         elif trophy == "raleuse":
           say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
+        elif trophy == "4L Trophy":
+          say = u"C'est un rallye aid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
+        elif trophy == "Hamada":
+          say = u "C'est le troisième type de désert présent au maroc. En gros c'est une étendue rocailleuse à perte de vue"
+        elif trophy == "religion":
+          say = u"Le peuple marocain est majoritairement de religion musulmane"
+        elif trophy == "musulmans":
+          say = u"Le peuple marocain est majoritairement de religion musulmane"
+        elif trophy == "Reg":
+          say = u"C'est ce qui caractérise un désert de pierres"
+        elif trophy == "4L Trophy":
+          say = u"C'est un rally aid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
+        elif trophy == "lecole":
+          say = u"Ils font un master en management des systèmes d'informations et du numérique"
+        elif trophy == "master":
+          say = u"Ils font un master en management des systèmes d'informations et du numérique"
+        elif trophy == "etudes":
+          say = u"Ils font un master en management des systèmes d'informations et du numérique"
+        elif trophy == "etude":
+          say = u"Ils font un master en management des systèmes d'informations et du numérique"
+        elif trophy == "motive":
+          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
+        elif trophy == "motivation":
+          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
+        elif trophy == "motives":
+          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
         else:
           say = u"Je ne comprends rien"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy")
-
-
-    def Quoi_callback(self, hermes, intent_message):
-        hermes.publish_end_session(intent_message.session_id, "")
-
-        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-        quoi = '{}'.format(intent_message.slots.quoi.first().value)
-        if quoi == "4L Trophy":
-          say = u"C'est un rallye aid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
-        elif quoi == "Hamada":
-          say = u "C'est le troisième type de désert présent au maroc. En gros c'est une étendue rocailleuse à perte de vue"
-        elif quoi == "religion":
-          say = u"Le peuple marocain est majoritairement de religion musulmane"
-        elif quoi == "musulmans":
-          say = u"Le peuple marocain est majoritairement de religion musulmane"
-        elif quoi == "Reg":
-          say = u"C'est ce qui caractérise un désert de pierres"
-        elif quoi == "4L Trophy":
-          say = u"C'est un rally aid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
-        elif quoi == "lecole":
-          say = u"Ils font un master en management des systèmes d'informations et du numérique"
-        elif quoi == "master":
-          say = u"Ils font un master en management des systèmes d'informations et du numérique"
-        elif quoi == "etudes":
-          say = u"Ils font un master en management des systèmes d'informations et du numérique"
-        elif quoi == "etude":
-          say = u"Ils font un master en management des systèmes d'informations et du numérique"
-        elif quoi == "motive":
-          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
-        elif quoi == "motivation":
-          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
-        elif quoi == "motives":
-          say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
-        else:
-          say = u"qui quoi ? j'ai rien pigé"
-        hermes.publish_start_session_notification(intent_message.site_id, say, "Quoi")
 
 
     def master_intent_callback(self,hermes, intent_message):
