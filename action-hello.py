@@ -131,7 +131,7 @@ class Hello(object):
         elif trophy == "raleuse":
           say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
         elif trophy == "4L Trophy":
-          say = u"C'est un rallye aid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
+          say = u"C'est un rallye raid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
         elif trophy == "Hamada":
           say = u "C'est le troisième type de désert présent au maroc. En gros c'est une étendue rocailleuse à perte de vue"
         elif trophy == "religion":
@@ -171,8 +171,6 @@ class Hello(object):
 	    self.Climat_callback(hermes, intent_message)
 	elif coming_intent == 'equisables:Trophy':
 	    self.Trophy_callback(hermes, intent_message)
-	elif coming_intent == 'equisables:Quoi':
-	    self.Quoi_callback(hermes, intent_message)
 
 
     def start_blocking(self):
