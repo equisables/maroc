@@ -83,16 +83,16 @@ class Hello(object):
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Paysage")
 
 
-    def Personnalite3_callback(self, hermes, intent_message):
+    def Trophy_callback(self, hermes, intent_message):
 	hermes.publish_end_session(intent_message.session_id, "")
 
-	print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-	personnalite3 = '{}'.format(intent_message.slots.personnalite3.first().value)
-	if personnalite3 == "souple":
-	  say = u"TEST OK"
+	print '[Received] intent : {}'.format(intent_message.intent.intent_name)
+	trophy = '{}'.format(intent_message.slots.trophy.first().value)
+	if trophy == "souple":
+	  say = u"oui maxi souple"
 	else:
-	  say = u"PRESQUE OK"
-	hermes.publish_start_session_notification(intent_message.site_id, say, "Personnalite3")
+	  say = u"je sais pas"
+	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy")
 
 
 #    def Personnalite_callback(self, hermes, intent_message):
@@ -155,8 +155,8 @@ class Hello(object):
 	    self.Paysage_callback(hermes, intent_message)
 	elif coming_intent == 'equisables:Climat':
 	    self.Climat_callback(hermes, intent_message)
-	elif coming_intent == 'equisables:Personnalite3':
-	    self.Personnalite3_callback(hermes, intent_mesage)
+	elif coming_intent == 'equisables:Trophy':
+	    self.Trophy_callback(hermes, intent_message)
 #	elif coming_intent == 'equisables:Test':
 #	    self.Test_callback(hermes, intent_message)
 
