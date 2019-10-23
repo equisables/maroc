@@ -132,14 +132,14 @@ class Hello(object):
           say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
 #        elif trophy == "4L Trophy":
 #          say = u"C'est un rallye raid qui a 23 ans. Le but c'est de faire une course dans une 4L dans le désert marocain"
-#        elif trophy == "Hamada":
-#          say = u "C'est le troisième type de désert présent au maroc. En gros c'est une étendue rocailleuse à perte de vue"
-#        elif trophy == "religion":
-#          say = u"Le peuple marocain est majoritairement de religion musulmane"
-#        elif trophy == "musulmans":
-#          say = u"Le peuple marocain est majoritairement de religion musulmane"
-#        elif trophy == "Reg":
-#          say = u"C'est ce qui caractérise un désert de pierres"
+        elif trophy == "Hamada":
+          say = u"C'est le troisième type de désert présent au maroc. En gros c'est une étendue rocailleuse à perte de vue"
+        elif trophy == "religion":
+          say = u"Le peuple marocain est majoritairement de religion musulmane"
+        elif trophy == "musulmans":
+          say = u"Le peuple marocain est majoritairement de religion musulmane"
+        elif trophy == "Reg":
+          say = u"C'est ce qui caractérise un désert de pierres"
 #        elif trophy == "lecole":
 #          say = u"Ils font un master en management des systèmes d'informations et du numérique"
 #        elif trophy == "master":
