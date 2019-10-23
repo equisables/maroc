@@ -92,7 +92,7 @@ class Hello(object):
 	  say = u"TEST OK"
 	else:
 	  say = u"PRESQUE OK"
-	hermes.publish_start_session_notification(intent_message.site_id, say, "Test")
+	hermes.publish_start_session_notification(intent_message.site_id, say, "Personnalite")
 
 
 #    def Personnalite_callback(self, hermes, intent_message):
