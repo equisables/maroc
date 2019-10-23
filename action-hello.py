@@ -83,25 +83,25 @@ class Hello(object):
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Paysage")
 
 
-    def Test_callback(self, hermes, intent_message):
+    def Personnalite_callback(self, hermes, intent_message):
 	hermes.publish_end_session(intent_message.session_id, "")
 
 	print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-	slottest = '{}'.format(intent_message.slots.slottest.first().value)
-	if slottest == "coucou":
+	personnalite = '{}'.format(intent_message.slots.personnalite.first().value)
+	if personnalite == "souple":
 	  say = u"TEST OK"
 	else:
 	  say = u"PRESQUE OK"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Test")
 
 
-    def Personnalite_callback(self, hermes, intent_message):
-        hermes.publish_end_session(intent_message.session_id, "")
+#    def Personnalite_callback(self, hermes, intent_message):
+#        hermes.publish_end_session(intent_message.session_id, "")
 
-        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-        personnalite = '{}'.format(intent_message.slots.personnalite.first().value)
-        if personnalite == "souple":
-          say = u"Clothilde a une conduite très souple. Merci encore !"
+#        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+#        personnalite = '{}'.format(intent_message.slots.personnalite.first().value)
+#        if personnalite == "souple":
+#          say = u"Clothilde a une conduite très souple. Merci encore !"
 #        elif personnalite == "souplesse":
 #          say = u"Clothilde a une conduite très souple. Merci encore !"
 #        elif personnalite == "conduisez":
@@ -142,9 +142,9 @@ class Hello(object):
 #          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
 #        elif personnalite == "raleuse":
 #          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
-        else:
-          say = u"Je ne comprends rien"
-        hermes.publish_start_session_notification(intent_message.site_id, say, "Personnalite")
+#        else:
+#          say = u"Je ne comprends rien"
+#        hermes.publish_start_session_notification(intent_message.site_id, say, "Personnalite")
 
 
     def master_intent_callback(self,hermes, intent_message):
@@ -157,8 +157,8 @@ class Hello(object):
 	    self.Climat_callback(hermes, intent_message)
 	elif coming_intent == 'equisables:Personnalite':
 	    self.Personnalite_callback(hermes, intent_mesage)
-	elif coming_intent == 'equisables:Test':
-	    self.Test_callback(hermes, intent_message)
+#	elif coming_intent == 'equisables:Test':
+#	    self.Test_callback(hermes, intent_message)
 
 
     def start_blocking(self):
