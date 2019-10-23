@@ -85,9 +85,10 @@ class Hello(object):
         hermes.publish_end_session(intent_message.session_id, "")
 
         print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-        personnalite = '{}'.format(intent_message.slots.personnalite.first().value)
-        if personnalite == "souple":
-          say = u"Clothilde a une conduite très souple. Merci encore !"
+	say = "TEST"
+#        personnalite = '{}'.format(intent_message.slots.personnalite.first().value)
+#        if personnalite == "souple":
+#          say = u"Clothilde a une conduite très souple. Merci encore !"
 #        elif personnalite == "souplesse":
 #          say = u"Clothilde a une conduite très souple. Merci encore !"
 #        elif personnalite == "conduisez":
@@ -128,8 +129,8 @@ class Hello(object):
 #          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
 #        elif personnalite == "raleuse":
 #          say = u"Who! Who! Je ne veux pas de problème. Il me reste de la route à faire"
-        else:
-          say = u"Je ne comprends rien"
+#        else:
+#          say = u"Je ne comprends rien"
         hermes.publish_start_session_notification(intent_message.site_id, say, "Personnalite")
 
 
