@@ -220,6 +220,34 @@ class Hello(object):
           say = u"Je te présente ma bande : Clothilde et Hadrien"
         elif trophy == "troupe":
           say = u"Ma petite troupe c'est deux jeunes et une vieille"
+        elif trophy == "clothilde":
+          say = u"Clothilde a 22 ans et vit à Lyon. Elle est consultante S A P chez H R C Consulting aie ti, et fan de GOTE"
+        elif trophy == "hadrien":
+          say == u"Hadrien a 23 ans et il est de région parisienne. Il est chef de projet digital à Grand Vision, mais c'est surtout un déjanté de la clef à molette"
+        elif (trophy == "h r c" or trophy == "H R C Consulting" or trophy == "entreprise francaise" or trophy == "entreprise" or trophy == "boite"):
+          say = u"H R C Consulting est mon créateur. C'est une entreprise en conseil en organisation et en systèmes d'informations spécialisé sur S A P. Ils sont basés à Lyon, mais interviennent partout en France"
+        elif trophy == "equisables":
+          say = u"Equisables est une jeune association qui prône l'accès aux outils numériques. Ses membres sont vraiment cool"
+        elif trophy == "jean jacques rey":
+          say = u"Cet ex-cadre de la grande distribution est tout simplement le mec génial qui à inventé le 4L Trophy"
+        elif trophy == "createur du 4L Trophy":
+          say = u"C'est jean jacques rey, cet ex-cadre de la grande distribution est tout simplement le mec génial qui a inventé le 4L Trophy"
+        elif (trophy == "combien dedition" or trophy == "depuis quand" or trophy == "quel age le rally raid" or trophy == "quel age la course"):
+          say = u"La course fête sa 23 ième année"
+        elif (trophy == "a qui cette voiture" or trophy == "a qui cette 4L" or trophy == "a qui cette caisse" or trophy == "vous appartient" or trophy == "achete la voiture" or trophy == "achete la 4L" or trophy == "achete la caisse" or trophy == "tappartiens a lassociation" or trophy == "quelle association" or trophy == "quelle équipe" or trophy == "cours avec qui" or trophy == "tappartiens a qui"):
+          say = u"J'appartiens à l'association équisables depuis avril 2019"
+        elif (trophy == "surnom" or trophy == "ptit prenom" or trophy == "ptit nom" or trophy == "votre truc" or trophy == "assistant vocal" or trophy == "chatbot" or trophy == "tu tappelles" or trophy == "assistant vocal" or trophy == "chatbot" or trophy == "ton prenom" or trophy == "ton nom"):
+          say = u"Je m'appelle Snips, mais c'est titine pour les intimes"
+        elif (trophy == "inventeur" or trophy == "creer" or trophy == "cree" or trophy == "createur" or trophy == "qui tas cree"):
+          say = u"H R C Consulting est mon créateur. C'est ausi un des sponsors de équisables"
+        elif (trophy == "compose de quoi" or trophy == "technologie" or trophy "compose comment" or trophy == "marche comment" or trophy == "technologies"):
+          say = u"Je suis l'assemblage d'un raspberryPI, de snips mais aussi de capteurs. Pour t'entendre j'ai aussi des micros"
+        elif trophy == "pilote":
+          say = u"Impossible à dire, je ne veux pas de problème"
+        elif trophy == "passager":
+          say = u"Il n'y a pas de passager, mais que des pilotes"
+        elif (trophy == "mecanique" or trophy == "mecano"):
+          say = u"On a le chef mécano, c'est Hadrien. Sa doctrine : tant que ça tiens, alors ça passe"
         else:
           say = u"Je ne comprends rien"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy")
