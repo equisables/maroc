@@ -242,12 +242,12 @@ class Hello(object):
 #          say = u"H R C Consulting est mon créateur. C'est ausi un des sponsors de équisables"
 #        elif (trophy == "compose de quoi" or trophy == "technologie" or trophy "compose comment" or trophy == "marche comment" or trophy == "technologies"):
 #          say = u"Je suis l'assemblage d'un raspberryPI, de snips mais aussi de capteurs. Pour t'entendre j'ai aussi des micros"
-#        elif trophy == "pilote":
-#          say = u"Impossible à dire, je ne veux pas de problème"
-#        elif trophy == "passager":
-#          say = u"Il n'y a pas de passager, mais que des pilotes"
-#        elif (trophy == "mecanique" or trophy == "mecano"):
-#          say = u"On a le chef mécano, c'est Hadrien. Sa doctrine : tant que ça tiens, alors ça passe"
+        elif trophy == "pilote":
+          say = u"Impossible à dire, je ne veux pas de problème"
+        elif trophy == "passager":
+          say = u"Il n'y a pas de passager, mais que des pilotes"
+        elif (trophy == "mecanique" or trophy == "mecano"):
+          say = u"On a le chef mécano, c'est Hadrien. Sa doctrine : tant que ça tiens, alors ça passe"
         else:
           say = u"Je ne comprends rien"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy")
