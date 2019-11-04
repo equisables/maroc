@@ -238,10 +238,10 @@ class Hello(object):
           say = u"J'appartiens à l'association équisables depuis avril 2019"
 #        elif (trophy == "surnom" or trophy == "ptit prenom" or trophy == "ptit nom" or trophy == "votre truc" or trophy == "assistant vocal" or trophy == "chatbot" or trophy == "tu tappelles" or trophy == "assistant vocal" or trophy == "chatbot" or trophy == "ton prenom" or trophy == "ton nom"):
 #          say = u"Je m'appelle Snips, mais c'est titine pour les intimes"
-#        elif (trophy == "inventeur" or trophy == "creer" or trophy == "cree" or trophy == "createur" or trophy == "qui tas cree"):
-#          say = u"H R C Consulting est mon créateur. C'est ausi un des sponsors de équisables"
-        elif (trophy == "compose de quoi" or trophy == "technologie" or trophy "compose comment" or trophy == "marche comment" or trophy == "technologies"):
-          say = u"Je suis l'assemblage d'un raspberryPI, de snips mais aussi de capteurs. Pour t'entendre j'ai aussi des micros"
+        elif (trophy == "inventeur" or trophy == "creer" or trophy == "cree" or trophy == "createur" or trophy == "qui tas cree"):
+          say = u"H R C Consulting est mon créateur. C'est ausi un des sponsors de équisables"
+#        elif (trophy == "compose de quoi" or trophy == "technologie" or trophy "compose comment" or trophy == "marche comment" or trophy == "technologies"):
+#          say = u"Je suis l'assemblage d'un raspberryPI, de snips mais aussi de capteurs. Pour t'entendre j'ai aussi des micros"
         elif trophy == "pilote":
           say = u"Impossible à dire, je ne veux pas de problème"
         elif trophy == "passager":
