@@ -188,6 +188,12 @@ class Hello(object):
           say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
         elif trophy == "photos de toi":
           say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
+        elif (trophy == "don" or trophy == "dons"):
+          say = u"Chaque équipage doit ramener 30 kilos de denrées alimentaires pour la croix rouge. Mais aussi des fournitures scolaires et sportives pour les enfants du désert marocain. Ensuite ils peuvent faire d'autres dons s'ils le souhaitent"
+        elif (trophy == "enfants" or trophy == "récolter des dons matériels" or trophy == "récolter des dons financiers" or trophy == "l'objectif du 4L Trophy"):
+          say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
+        elif trophy == "croixrouge":
+          say = u"La croix rouge est chargée de collecter 10 kilos de denrées alimentaires par équipage, pour en distribuer aux familles pauvres en france"
         else:
           say = u"Je ne comprends rien"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy")
