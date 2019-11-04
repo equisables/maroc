@@ -234,8 +234,8 @@ class Hello(object):
           say = u"C'est jean jacques rey, cet ex-cadre de la grande distribution est tout simplement le mec génial qui a inventé le 4L Trophy"
         elif (trophy == "combien dedition" or trophy == "depuis quand" or trophy == "quel age le rally raid" or trophy == "quel age la course"):
           say = u"La course fête sa 23 ième année"
-#        elif (trophy == "a qui cette voiture" or trophy == "a qui cette 4L" or trophy == "a qui cette caisse" or trophy == "vous appartient" or trophy == "achete la voiture" or trophy == "achete la 4L" or trophy == "achete la caisse" or trophy == "tappartiens a lassociation" or trophy == "quelle association" or trophy == "quelle équipe" or trophy == "cours avec qui" or trophy == "tappartiens a qui"):
-#          say = u"J'appartiens à l'association équisables depuis avril 2019"
+        elif (trophy == "a qui cette voiture" or trophy == "a qui cette 4L" or trophy == "a qui cette caisse" or trophy == "vous appartient" or trophy == "achete la voiture" or trophy == "achete la 4L" or trophy == "achete la caisse" or trophy == "tappartiens a lassociation" or trophy == "quelle association" or trophy == "quelle équipe" or trophy == "cours avec qui" or trophy == "tappartiens a qui"):
+          say = u"J'appartiens à l'association équisables depuis avril 2019"
 #        elif (trophy == "surnom" or trophy == "ptit prenom" or trophy == "ptit nom" or trophy == "votre truc" or trophy == "assistant vocal" or trophy == "chatbot" or trophy == "tu tappelles" or trophy == "assistant vocal" or trophy == "chatbot" or trophy == "ton prenom" or trophy == "ton nom"):
 #          say = u"Je m'appelle Snips, mais c'est titine pour les intimes"
 #        elif (trophy == "inventeur" or trophy == "creer" or trophy == "cree" or trophy == "createur" or trophy == "qui tas cree"):
