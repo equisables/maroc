@@ -220,16 +220,16 @@ class Hello(object):
           say = u"Je te présente ma bande : Clothilde et Hadrien"
         elif trophy == "troupe":
           say = u"Ma petite troupe c'est deux jeunes et une vieille"
-        elif trophy == "clothilde":
-          say = u"Clothilde a 22 ans et vit à Lyon. Elle est consultante S A P chez H R C Consulting aie ti, et fan de GOTE"
-        elif trophy == "hadrien":
-          say == u"Hadrien a 23 ans et il est de région parisienne. Il est chef de projet digital à Grand Vision, mais c'est surtout un déjanté de la clef à molette"
+#        elif trophy == "clothilde":
+#          say = u"Clothilde a 22 ans et vit à Lyon. Elle est consultante S A P chez H R C Consulting aie ti, et fan de GOTE"
+#        elif trophy == "hadrien":
+#          say == u"Hadrien a 23 ans et il est de région parisienne. Il est chef de projet digital à Grand Vision, mais c'est surtout un déjanté de la clef à molette"
 #        elif (trophy == "h r c" or trophy == "H R C Consulting" or trophy == "entreprise francaise" or trophy == "entreprise" or trophy == "boite"):
 #          say = u"H R C Consulting est mon créateur. C'est une entreprise en conseil en organisation et en systèmes d'informations spécialisé sur S A P. Ils sont basés à Lyon, mais interviennent partout en France"
-#        elif trophy == "equisables":
-#          say = u"Equisables est une jeune association qui prône l'accès aux outils numériques. Ses membres sont vraiment cool"
-#        elif trophy == "jean jacques rey":
-#          say = u"Cet ex-cadre de la grande distribution est tout simplement le mec génial qui à inventé le 4L Trophy"
+        elif trophy == "equisables":
+          say = u"Equisables est une jeune association qui prône l'accès aux outils numériques. Ses membres sont vraiment cool"
+        elif trophy == "jean jacques rey":
+          say = u"Cet ex-cadre de la grande distribution est tout simplement le mec génial qui à inventé le 4L Trophy"
 #        elif trophy == "createur du 4L Trophy":
 #          say = u"C'est jean jacques rey, cet ex-cadre de la grande distribution est tout simplement le mec génial qui a inventé le 4L Trophy"
 #        elif (trophy == "combien dedition" or trophy == "depuis quand" or trophy == "quel age le rally raid" or trophy == "quel age la course"):
