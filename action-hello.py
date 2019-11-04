@@ -194,11 +194,11 @@ class Hello(object):
           say = u"Chaque équipage doit ramener 30 kilos de denrées alimentaires pour la croix rouge. Mais aussi des fournitures scolaires et sportives pour les enfants du désert marocain. Ensuite ils peuvent faire d'autres dons s'ils le souhaitent"
         elif trophy == "enfants":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
-        elif trophy == "récolter des dons matériels":
+        elif trophy == "recolter des dons materiels":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
-        elif trophy == "récolter des dons financiers":
+        elif trophy == "recolter des dons financiers":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
-        elif trophy == "l'objectif du 4L Trophy":
+        elif trophy == "lobjectif du 4L Trophy":
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
         elif trophy == "croixrouge":
           say = u"La croix rouge est chargée de collecter 10 kilos de denrées alimentaires par équipage, pour en distribuer aux familles pauvres en france"
