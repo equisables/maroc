@@ -202,6 +202,24 @@ class Hello(object):
           say = u"L'objectif du 4L Trophy c'est de récolter des dons financiers et matériels afin de construire des écoles en plein désert"
         elif trophy == "croixrouge":
           say = u"La croix rouge est chargée de collecter 10 kilos de denrées alimentaires par équipage, pour en distribuer aux familles pauvres en france"
+        elif trophy == "régiment":
+          say = u"Ah non non ! On ne part pas au front. Je suis trop vieille pour ça"
+        elif trophy == "smala":
+          say = u"Eh ! Nous ne sommes pas si nombreux. Juste moi, Clothilde et Hadrien. C'est tout"
+        elif trophy == "tribu":
+          say = u"Eh ! Nous ne sommes pas si nombreux. Juste moi, Clothilde et Hadrien. C'est tout"
+        elif trophy == "clan":
+          say = u"Eh ! On est pas dans clash of Clan. Il faut parler d'équipe"
+        elif (trophy == "ecurie" or trophy == "numero" or trophy == "numero dequipage"):
+          say = u"Hadrien, Clothilde et moi même représentons l'écurie 235 du 4L Trophy"
+        elif trophy == "equipage":
+          say = u"Hadrien, Clothilde et moi même représentons l'équipage 235"
+        elif (trophy == "individu" or trophy == "drole dindividu" or trophy == "dindividu a bord" or trophy == "combien a bord"):
+          say = u"Ils sont deux individus à mon bord : Clothilde et Hadrien"
+        elif trophy == "bande":
+          say = u"Je te présente ma bande : Clothilde et Hadrien"
+        elif trophy == "troupe":
+          say = u"Ma petite troupe c'est deux jeunes et une vieille"
         else:
           say = u"Je ne comprends rien"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy")
