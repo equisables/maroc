@@ -224,8 +224,8 @@ class Hello(object):
 #          say = u"Clothilde a 22 ans et vit à Lyon. Elle est consultante S A P chez H R C Consulting aie ti, et fan de GOTE"
 #        elif trophy == "hadrien":
 #          say == u"Hadrien a 23 ans et il est de région parisienne. Il est chef de projet digital à Grand Vision, mais c'est surtout un déjanté de la clef à molette"
-#        elif (trophy == "h r c" or trophy == "H R C Consulting" or trophy == "entreprise francaise" or trophy == "entreprise" or trophy == "boite"):
-#          say = u"H R C Consulting est mon créateur. C'est une entreprise en conseil en organisation et en systèmes d'informations spécialisé sur S A P. Ils sont basés à Lyon, mais interviennent partout en France"
+        elif (trophy == "h r c" or trophy == "H R C Consulting" or trophy == "entreprise francaise" or trophy == "entreprise" or trophy == "boite"):
+          say = u"H R C Consulting est mon créateur. C'est une entreprise en conseil en organisation et en systèmes d'informations spécialisé sur S A P. Ils sont basés à Lyon, mais interviennent partout en France"
         elif trophy == "equisables":
           say = u"Equisables est une jeune association qui prône l'accès aux outils numériques. Ses membres sont vraiment cool"
         elif trophy == "jean jacques rey":
@@ -240,8 +240,8 @@ class Hello(object):
           say = u"Je m'appelle Snips, mais c'est titine pour les intimes"
         elif (trophy == "inventeur" or trophy == "creer" or trophy == "cree" or trophy == "createur" or trophy == "qui tas cree"):
           say = u"H R C Consulting est mon créateur. C'est ausi un des sponsors de équisables"
-#        elif (trophy == "compose de quoi" or trophy == "technologie" or trophy "compose comment" or trophy == "marche comment" or trophy == "technologies"):
-#          say = u"Je suis l'assemblage d'un raspberryPI, de snips mais aussi de capteurs. Pour t'entendre j'ai aussi des micros"
+        elif (trophy == "compose de quoi" or trophy == "technologie" or trophy == "compose comment" or trophy == "marche comment" or trophy == "technologies"):
+          say = u"Je suis l'assemblage d'un raspberryPI, de snips mais aussi de capteurs. Pour t'entendre j'ai aussi des micros"
         elif trophy == "pilote":
           say = u"Impossible à dire, je ne veux pas de problème"
         elif trophy == "passager":
