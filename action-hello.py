@@ -154,53 +154,43 @@ class Hello(object):
           say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
         elif trophy == "motives":
           say = u"Notre première motivation, c'est d'apporter de la technologie aux enfants marocains"
+        elif trophy == "buzz":
+          say = u"J'avoue que je suis principalement à l'origine du beuhzze"
+        elif trophy == "linkedin":
+          say = u"Je me souviens de la publicité line queu dine qu'a tourné Hadrien pour faire la promo de l'asso. J'étais rouge à cette triste époque"
+        elif trophy == "followers":
+          say = u"Je sais, je sais, des centaines de personnes me suivent. Une voiture qui parle, c'est délirant"
+        elif trophy == "repute":
+          say = u"Je sais, je sais, des centaines de personnes me suivent. Une voiture qui parle, c'est délirant"
+        elif trophy == "internet":
+          say = u"La reusta des réseaux internet, c'est moi"
+        elif trophy == "je seche":
+          say = u"JE SECHE JE SECHE"
+        elif trophy == "logo":
+          say = u"Le logo est plutôt sympa. Il véhicule la bienveillance et l'esprit d'équipe"
+        elif trophy == "facebook":
+          say = u"N'hésitez pas à me suivre sur fesse bouque sous le nom de page : et qui sable tiret 4L Trophy 2020"
+        elif trophy == "reseaux":
+          say = u"N'hésitez pas à me suivre sur fesse bouque sous le nom de page : et qui sable tiret 4L Trophy 2020"
+        elif trophy == "videos":
+          say = u"On a tourné quel que vidéos pas piqué des hannetons. Elles retracent le parcous d'équisables jusqu'à aujourd'hui"
+        elif trophy == "films":
+          say = u"On a tourné quel que vidéos pas piqué des hannetons. Elles retracent le parcous d'équisables jusqu'à aujourd'hui"
+        elif trophy == "site":
+          say = u"Rien de mieux qu'un site internet pour une bonne visibilité waibe. Découvrez et qui sable point F R, et faites un petit don en passant"
+        elif trophy == "site internet":
+          say = u"Rien de mieux qu'un site internet pour une bonne visibilité waibe. Découvrez et qui sable point F R, et faites un petit don en passant"
+        elif trophy == "insta":
+          say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
+        elif trophy == "instagram":
+          say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
+        elif trophy == "photos de la 4L":
+          say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
+        elif trophy == "photos de toi":
+          say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
         else:
           say = u"Je ne comprends rien"
 	hermes.publish_start_session_notification(intent_message.site_id, say, "Trophy")
-
-
-    def Pub_callback(self, hermes, intent_message):
-        hermes.publish_end_session(intent_message.session_id, "")
-
-        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-        pub = '{}'.format(intent_message.slots.pub.first().value)
-        if pub == "buzz":
-          say = u"J'avoue que je suis principalement à l'origine du beuhzze"
-        elif pub == "linkedin":
-          say = u"Je me souviens de la publicité line queu dine qu'a tourné Hadrien pour faire la promo de l'asso. J'étais rouge à cette triste époque"
-        elif pub == "followers":
-          say = u"Je sais, je sais, des centaines de personnes me suivent. Une voiture qui parle, c'est délirant"
-        elif pub == "repute":
-          say = u"Je sais, je sais, des centaines de personnes me suivent. Une voiture qui parle, c'est délirant"
-        elif pub == "internet":
-          say = u"La reusta des réseaux internet, c'est moi"
-        elif pub == "je seche":
-          say = u"JE SECHE JE SECHE"
-        elif pub == "logo":
-          say = u"Le logo est plutôt sympa. Il véhicule la bienveillance et l'esprit d'équipe"
-        elif pub == "facebook":
-          say = u"N'hésitez pas à me suivre sur fesse bouque sous le nom de page : et qui sable tiret 4L Trophy 2020"
-        elif pub == "reseaux":
-          say = u"N'hésitez pas à me suivre sur fesse bouque sous le nom de page : et qui sable tiret 4L Trophy 2020"
-        elif pub == "videos":
-          say = u"On a tourné quel que vidéos pas piqué des hannetons. Elles retracent le parcous d'équisables jusqu'à aujourd'hui"
-        elif pub == "films":
-          say = u"On a tourné quel que vidéos pas piqué des hannetons. Elles retracent le parcous d'équisables jusqu'à aujourd'hui"
-        elif pub == "site":
-          say = u"Rien de mieux qu'un site internet pour une bonne visibilité waibe. Découvrez et qui sable point F R, et faites un petit don en passant"
-        elif pub == "site internet":
-          say = u"Rien de mieux qu'un site internet pour une bonne visibilité waibe. Découvrez et qui sable point F R, et faites un petit don en passant"
-        elif pub == "insta":
-          say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
-        elif pub == "instagram":
-          say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
-        elif pub == "photos de la 4L":
-          say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
-        elif pub == "photos de toi":
-          say = u"Sur insta, vous retrouverez des photos coquines de moi. On m'a décaissé d'après les rumeurs."
-        else:
-          say = u"Je ne pige rien"
-        hermes.publish_start_session_notification(intent_message.site_id, say, "Pub")
 
 
     def master_intent_callback(self,hermes, intent_message):
@@ -213,8 +203,6 @@ class Hello(object):
 	    self.Climat_callback(hermes, intent_message)
 	elif coming_intent == 'equisables:Trophy':
 	    self.Trophy_callback(hermes, intent_message)
-	elif coming_intent == 'equisables:Pub'
-	    self.Pub_callback(hermes, intent_message)
 
 
     def start_blocking(self):
