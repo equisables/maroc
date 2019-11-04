@@ -224,7 +224,7 @@ class Hello(object):
 #          say = u"Clothilde a 22 ans et vit à Lyon. Elle est consultante S A P chez H R C Consulting aie ti, et fan de GOTE"
 #        elif trophy == "hadrien":
 #          say == u"Hadrien a 23 ans et il est de région parisienne. Il est chef de projet digital à Grand Vision, mais c'est surtout un déjanté de la clef à molette"
-        elif (trophy == "h r c" or trophy == "H R C Consulting" or trophy == "entreprise francaise" or trophy == "entreprise" or trophy == "boite"):
+        elif (trophy == "h r c" or trophy == "h r c consulting" or trophy == "entreprise francaise" or trophy == "entreprise" or trophy == "boite"):
           say = u"H R C Consulting est mon créateur. C'est une entreprise en conseil en organisation et en systèmes d'informations spécialisé sur S A P. Ils sont basés à Lyon, mais interviennent partout en France"
         elif trophy == "equisables":
           say = u"Equisables est une jeune association qui prône l'accès aux outils numériques. Ses membres sont vraiment cool"
